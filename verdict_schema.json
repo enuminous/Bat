@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BAT Verdict",
+  "type": "object",
+  "required": [
+    "verdict",
+    "best_conventional_baseline",
+    "primary_delta_brier"
+  ],
+  "properties": {
+    "verdict": {
+      "enum": [
+        "SURVIVES",
+        "WEAK / INCONCLUSIVE",
+        "BASELINE EXPLAINS RESULT",
+        "PLACEBO FAILURE"
+      ]
+    },
+    "best_conventional_baseline": {
+      "type": "string"
+    },
+    "primary_delta_brier": {
+      "type": "number"
+    },
+    "placebo_delta_brier": {
+      "type": "number"
+    }
+  }
+}

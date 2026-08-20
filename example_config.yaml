@@ -1,0 +1,19 @@
+machine: BAT-M1
+version: 1.0.0
+
+attacks:
+  raw_state: true
+  signed_accumulator: true
+  rolling_statistics: true
+  autoregressive: true
+  conventional_ensemble: true
+  shuffled_placebo: true
+  sign_ablation: true
+  recursion_ablation: true
+
+primary_metric:
+  name: brier_score
+  material_gain: 0.002
+
+freeze:
+  hash: sha256
